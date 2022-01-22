@@ -1,6 +1,9 @@
 # NASA APOD Time-Capsule
 [NASA APOD API](https://api.nasa.gov/index.html)
 
+## RESTful Architecture
+![](whiteboard.jpg)
+
 ## Guidelines
 
 - use API linked above
