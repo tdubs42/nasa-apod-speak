@@ -1,8 +1,21 @@
 # NASA APOD Time-Capsule
+
 [NASA APOD API](https://api.nasa.gov/index.html)
 
-## RESTful Architecture
-![](whiteboard.jpg)
+## RESTful Architecture + DB Schema
+
+![](design/whiteboard.jpg)
+![](design/db-schema.jpg)
+
+## Try Me
+
+After cloning the repo from Github:
+
+```bash
+npm i && npm run latest && npm run seed && npm start
+```
+
+### Endpoints
 
 ## Guidelines
 
@@ -22,9 +35,9 @@
 ## Steps
 
 1. Choose database
-   1. I am choosing a Sqlite3 database for sake of simplicity
+    1. I am choosing a Sqlite3 database for sake of simplicity
 2. Create github repo with a README
-   1. I will be making this repo private just to ensure e-mails are not exposed in the future for any reason
+    1. I will be making this repo private just to ensure e-mails are not exposed in the future for any reason
 3. Make @bryanlanders a collaborator on repo
 4. Whiteboard a RESTful architecture (export JPG and include on README page)
 5. Code your endpoints
