@@ -9,10 +9,29 @@
 
 ## Try Me
 
-After cloning the repo from Github:
+After cloning the repo from Github run the following from the root of the project:
 
 ```bash
-npm i && npm run latest && npm run seed && npm start
+cp .env.sample .env
+```
+
+```es6
+/* 
+   update DEV_DATABASE_URI in newly created .env to reflect your local
+   machine's PostgreSQL credentials to run a local db
+   
+   run the following commands at the root of the project
+*/
+```
+
+```bash
+npm i && npm run migrate && npm run seed && npm start
+```
+
+### To reset the db at anytime
+
+```es6
+npm run resetdb
 ```
 
 ### Endpoints

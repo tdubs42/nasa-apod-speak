@@ -14,16 +14,16 @@ const sharedConfig = {
 module.exports = {
   development: {
     ...sharedConfig,
-    connection: process.env.DEV_DATABASE_URL,
+    connection: process.env.DEV_DATABASE_URI,
   },
   testing: {
     ...sharedConfig,
-    connection: process.env.TESTING_DATABASE_URL,
+    connection: process.env.TESTING_DATABASE_URI,
   },
   production: {
     ...sharedConfig,
     connection: {
-      connectionString: process.env.DATABASE_URL,
+      connectionString: process.env.DATABASE_URI,
       ssl: true,
     },
   },

@@ -1,13 +1,14 @@
 const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
-
+const db = require("../data/db-config.js")
 const server = express();
 
 server.use(express.json());
 server.use(helmet());
 server.use(cors());
 
+server.get('/all', (req, res, next) => db)
 
 server.get("*",
   (_, res, next) => res.status(404)

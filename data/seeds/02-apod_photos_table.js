@@ -47,4 +47,6 @@ const photos = [
   }
 ]
 
-exports.seeds = knex => knex('apod_photos').insert(photos)
+exports.seed = function(knex) {
+  return knex('apod_photos').insert(photos)
+};

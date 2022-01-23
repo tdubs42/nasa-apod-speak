@@ -3,7 +3,8 @@ exports.up = async knex => {
             .createTable("apod_photos", apodPhotos => {
               apodPhotos.increments("apod_photo_id");
               apodPhotos.string("apod_photo_copyright");
-              apodPhotos.string("apod_photo_explanation").notNullable().unique();
+              apodPhotos.string("apod_photo_explanation", 1234).notNullable()
+                        .unique();
               apodPhotos.date("apod_photo_date_posted").notNullable().unique();
               apodPhotos.string("apod_photo_media_type").notNullable();
               apodPhotos.string("apod_photo_src").notNullable().unique();
