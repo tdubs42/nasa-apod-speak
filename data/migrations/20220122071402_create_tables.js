@@ -3,16 +3,26 @@ exports.up = async knex => {
             .createTable("apod_photos", apodPhotos => {
               apodPhotos.increments("apod_photo_id");
               apodPhotos.string("apod_photo_copyright");
-              apodPhotos.string("apod_photo_explanation", 1234).notNullable()
+              apodPhotos.string("apod_photo_explanation", 1234)
+                        .notNullable()
                         .unique();
-              apodPhotos.date("apod_photo_date_posted").notNullable().unique();
-              apodPhotos.string("apod_photo_media_type").notNullable();
-              apodPhotos.string("apod_photo_src").notNullable().unique();
-              apodPhotos.string("apod_photo_title").notNullable().unique();
+              apodPhotos.date("apod_photo_date_posted")
+                        .notNullable()
+                        .unique();
+              apodPhotos.string("apod_photo_media_type")
+                        .notNullable();
+              apodPhotos.string("apod_photo_src")
+                        .notNullable()
+                        .unique();
+              apodPhotos.string("apod_photo_title")
+                        .notNullable()
+                        .unique();
             })
             .createTable("apod_users", apodUsers => {
               apodUsers.increments("apod_user_id");
-              apodUsers.string("apod_user_email").notNullable().unique();
+              apodUsers.string("apod_user_email")
+                       .notNullable()
+                       .unique();
             })
             .createTable("apod_user_photo_ratings", apodUserPhotoRatings => {
               apodUserPhotoRatings.integer("apod_user_id")

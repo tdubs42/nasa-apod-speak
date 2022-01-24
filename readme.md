@@ -20,6 +20,9 @@ cp .env.sample .env
    update DEV_DATABASE_URI in newly created .env to reflect your local
    machine's PostgreSQL credentials to run a local db
    
+   updating APOD_API_KEY is not necessary if you follow the instructions below
+   and seed the db
+   
    run the following commands at the root of the project
 */
 ```
@@ -35,6 +38,15 @@ npm run resetdb
 ```
 
 ### Endpoints
+GET /
+retrieves all photos stored in db
+
+GET /today
+retrieves photo of the day
+{TODO add middleware logic to tie in POST request for new photo}
+
+POST /check-today
+adds photo of the day to db
 
 ## Guidelines
 
