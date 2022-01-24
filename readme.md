@@ -38,14 +38,14 @@ npm run resetdb
 ```
 
 ### Endpoints
-GET /
+GET /apod/
 retrieves all photos stored in db
 
-GET /today
+GET /apod/today
 retrieves photo of the day
 {TODO add middleware logic to tie in POST request for new photo}
 
-POST /check-today
+POST /apod/check-today
 adds photo of the day to db
 
 ## Guidelines
