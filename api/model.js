@@ -20,8 +20,17 @@ const savePhoto = async photo => {
   return newPhoto;
 };
 
+const addUser = async email => {
+  console.log(email)
+  const [newUser] = await db("apod_users")
+    .insert(email)
+
+  return newUser
+}
+
 module.exports = {
   getAllPhotos,
   currentDay,
-  savePhoto
+  savePhoto,
+  addUser
 };

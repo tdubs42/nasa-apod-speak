@@ -14,7 +14,6 @@
     "hrollback": "heroku run knex migrate:rollback -a apod-time-capsule",
     "hdatabase": "heroku pg:psql -a apod-time-capsule",
     "hseed": "heroku run knex seed:run -a apod-time-capsule",
-    "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand",
     "hpush": "git push heroku main"
   },
   "author": "tdubs42",
@@ -30,9 +29,13 @@
     "pg": "^8.7.1"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.0",
     "eslint": "^8.7.0",
-    "jest": "^27.4.7",
     "nodemon": "^2.0.15"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }

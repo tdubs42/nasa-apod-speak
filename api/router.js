@@ -14,10 +14,18 @@ router.get("/today", (req, res, next) => {
     .catch(next);
 });
 
+// this endpoint reads NASA APOD API and creates entry in db if date does not
+// already exist
 router.post("/check-today", fetchPhoto, (req, res, next) => {
-  console.log(res.locals.photo);
   db.savePhoto(res.locals.photo)
     .then(photo => res.status(201).json(photo))
+    .catch(next);
+});
+
+// create user with email
+router.post("/add-user", (req, res, next) => {
+  db.addUser(req.body.apod_user_email)
+    .then(user => res.status(201).json(user))
     .catch(next);
 });
 
