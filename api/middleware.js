@@ -1,5 +1,7 @@
 const fetch = require("node-fetch");
 const db = require("./model.js");
+// TODO for v2 add yup validation middleware for user creation to confirm valid
+//  email
 
 const fetchPhoto = async (req, res, next) => {
   await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.APOD_API_KEY}`)

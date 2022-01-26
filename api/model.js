@@ -28,9 +28,16 @@ const addUser = async email => {
   return newUser;
 };
 
+const deleteUser = email => {
+  return db("apod_users")
+    .where(email)
+    .del();
+};
+
 module.exports = {
   getAllPhotos,
   currentDay,
   savePhoto,
-  addUser
+  addUser,
+  deleteUser
 };

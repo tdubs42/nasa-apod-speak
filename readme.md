@@ -84,7 +84,9 @@ POST /apod/check-today adds photo of the day to db
     1. Read and Create photo
         1. Completed
     2. Create users
+       1. Completed
     3. Delete users
+       1. Completed
     4. Create rating for user
     5. Update rating for user
     6. Delete rating for user

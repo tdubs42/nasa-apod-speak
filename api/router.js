@@ -29,4 +29,14 @@ router.post("/add-user", (req, res, next) => {
     .catch(next);
 });
 
+// delete user with email
+router.delete("/delete-user", (req, res, next) => {
+  const deletedUser = req.body;
+
+  db.deleteUser(deletedUser)
+    .catch(next);
+
+  return res.json(deletedUser);
+});
+
 module.exports = router;
