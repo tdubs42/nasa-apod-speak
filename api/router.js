@@ -24,7 +24,7 @@ router.post("/check-today", fetchPhoto, (req, res, next) => {
 
 // create user with email
 router.post("/add-user", (req, res, next) => {
-  db.addUser(req.body.apod_user_email)
+  db.addUser(req.body)
     .then(user => res.status(201).json(user))
     .catch(next);
 });
